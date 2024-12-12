@@ -19,7 +19,6 @@
                 margin: 0;
                 background-color: #f4f4f4;
               }
-
             .slideshow-container {
               position: relative;
               max-width: 800px;
@@ -27,17 +26,14 @@
               overflow: hidden;
               border-radius: 10px;
             }
-
             .slide {
               display: none;
               position: relative;
             }
-
             .slide img {
               width: 100%;
               display: block;
             }
-
             .caption {
               position: absolute;
               bottom: 10px;
@@ -47,7 +43,6 @@
               padding: 5px 10px;
               border-radius: 5px;
             }
-
             .prev, .next {
               cursor: pointer;
               position: absolute;
@@ -63,24 +58,19 @@
               border: none;
               border-radius: 50%;
             }
-
             .prev:hover, .next:hover {
               background-color: #555;
             }
-
             .prev {
               left: 10px;
             }
-
             .next {
               right: 10px;
             }
-
             .fade {
               animation-name: fade;
               animation-duration: 1.5s;
             }
-
             @keyframes fade {
               from {opacity: 0.4;}
               to {opacity: 1;}
@@ -97,7 +87,6 @@
             </p>
         </div>
         <div class="slideshow-container">
-    <!-- Slides -->
     <div class="slide fade">
       <img src="https://lp-cms-production.imgix.net/2022-03/GettyRF_956963154.jpg?w=600&h=400" alt="Image 1">
       <div class="caption">The Green Valleys</div>
@@ -110,37 +99,9 @@
       <img src="https://deih43ym53wif.cloudfront.net/Uttarakhand-kedarnath-temple-before-sunrise-hindu-shutterstock_375337813.jpg_d5aae7fdd5.jpg" alt="Image 3">
       <div class="caption">Beautiful Temples On The Mountains</div>
     </div>
-
-    <!-- Navigation buttons -->
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
   </div>
-  <script>
-    let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.querySelectorAll(".slide");
-  slides.forEach(slide => slide.style.display = "none");
-
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-function changeSlide(n) {
-  let slides = document.querySelectorAll(".slide");
-  slides[slideIndex - 1].style.display = "none";
-
-  slideIndex += n;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  if (slideIndex < 1) { slideIndex = slides.length; }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-  </script>
         <h2>
             Why Choose us?
         </h2>
